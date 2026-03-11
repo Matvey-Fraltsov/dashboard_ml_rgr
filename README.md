@@ -20,7 +20,7 @@
 
 ## Технологии
 
-- Python 3.11
+- Python 3.10
 - Streamlit
 - Scikit-learn 1.4
 - CatBoost
