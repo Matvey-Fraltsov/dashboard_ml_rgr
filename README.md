@@ -22,7 +22,7 @@
 
 - Python 3.11
 - Streamlit
-- Scikit-learn
+- Scikit-learn 1.4
 - CatBoost
 - Pandas, NumPy
 - Seaborn, Matplotlib
@@ -38,8 +38,12 @@ cd dashboard_ml_rgr
 
 2. **Установи зависимости**
 
+```bash
 pip install -r requirements.txt
+```
 
 3. **Запусти приложение**
 
+```bash
 streamlit run app.py
+```
