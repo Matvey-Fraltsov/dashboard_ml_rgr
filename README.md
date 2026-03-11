@@ -33,7 +33,7 @@
 
 ```bash
 git clone https://github.com/Matvey-Fraltsov/dashboard_ml_rgr
-cd Dashboard
+cd dashboard_ml_rgr
 ```
 
 2. **Установи зависимости**
