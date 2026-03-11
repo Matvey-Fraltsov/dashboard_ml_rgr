@@ -231,20 +231,6 @@ def show_prediction_page():
                 prob_yes = probs[1]
                 prob_no = probs[0]
 
-                m1, m2 = st.columns(2)
-                m1.metric("Шанс установки", f"{prob_yes*100:.1f}%")
-                m2.metric("Шанс защиты", f"{prob_no*100:.1f}%")
-                
-                bar_color = "red" if prob_yes > 0.5 else "green"
-                st.write(f"Уровень угрозы установки:")
-                st.progress(prob_yes)
-                
-                if prob_yes > 0.75:
-                    st.warning("**Высокая вероятность**")
-                elif prob_yes < 0.25:
-                    st.info("**Низкая вероятность** ")
-                else:
-                    st.write("**Ситуация 50/50**")
 
     with tab_csv:
         st.subheader("Массовая обработка данных")
@@ -266,10 +252,10 @@ def show_prediction_page():
             csv_result = data.to_csv(index=False).encode('utf-8')
             st.download_button("Скачать CSV с прогнозами", csv_result, "predictions.csv", "text/csv")
 
-page = st.sidebar.selectbox("Навигация", ["Об авторе",
-                                          "Датасет и EDA",
-                                          "Визуализация зависимостей",
-                                          "Предсказание соответствующей  модели  ML"])
+page = st.sidebar.selectbox("Навигация", ["Информация о разработчике",
+                                          "Информация о датасете",
+                                          "Визуализация данных",
+                                          "Предсказания моделей"])
 
 if page == "Информация о разработчике":
     show_about_page()
